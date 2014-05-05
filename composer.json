@@ -1,8 +1,8 @@
 {
-    "name": "sonata-project/google-authenticator",
+    "name": "alexkevler/google-authenticator",
     "description": "Library to integrate Google Authenticator into a PHP project",
     "keywords": ["google authenticator"],
-    "homepage": "https://github.com/sonata-project/GoogleAuthenticator",
+    "homepage": "https://github.com/alexkevler/GoogleAuthenticator",
     "type": "library",
     "license": "MIT",
     "authors": [
