@@ -95,12 +95,16 @@ class GoogleAuthenticator
      * @param  string $user
      * @param  string $hostname
      * @param  string $secret
+     * @param  string $issuer
      * @return string
      */
-    public function getUrl($user, $hostname, $secret)
+    public function getUrl($user, $hostname, $secret, $issuer = null)
     {
         $encoder = "https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl=";
         $encoderURL = sprintf("%sotpauth://totp/%s@%s%%3Fsecret%%3D%s", $encoder, $user, $hostname, $secret);
+        if(!is_null($issuer)) {
+            $encoderURL .= '%26issuer=' . $issuer;
+        }
 
         return $encoderURL;
     }
